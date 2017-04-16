@@ -1,0 +1,501 @@
+q1.changing the html content
+==============================
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>What Can JavaScript Do?</h1>
+
+<p id="demo">JavaScript can change HTML content.</p>
+
+<button type="button"
+onclick="document.getElementById('demo').innerHTML = 'Hello JavaScript!'">
+Click Me!</button>
+
+</body>
+</html>
+===================================================
+
+q2. validation of input
+=====================
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>JavaScript Can Validate Input</h1>
+
+<p>Please input a number between 1 and 10:</p>
+
+<input id="numb" type="number">
+
+<button type="button" onclick="myFunction()">Submit</button>
+
+<p id="demo"></p>
+
+<script>
+function myFunction() {
+    var x, text;
+
+    // Get the value of the input field with id="numb"
+    x = document.getElementById("numb").value;
+
+    // If x is Not a Number or less than one or greater than 10
+    if (isNaN(x) || x < 1 || x > 10) {
+        text = "Input not valid";
+    } else {
+        text = "Input OK";
+    }
+    document.getElementById("demo").innerHTML = text;
+}
+</script>
+
+</body>
+</html> 
+====================================================
+q3. changing of paragraph
+
+<!DOCTYPE html>
+<html>
+<body> 
+
+<h1>My Web Page</h1>
+
+<p id="demo">A Paragraph</p>
+
+<button type="button" onclick="myFunction()">Try it</button>
+
+<script>
+function myFunction() {
+   document.getElementById("demo").innerHTML = "Paragraph changed.";
+}
+</script>
+
+</body>
+</html>
+=====================================================
+
+q4. javascript function to change the html
+
+<!doctype html>
+<!DOCTYPE html>
+<html>
+<body>
+
+<p id="demo">Display the result here.</p>
+<p id="demo1">Display the result here.</p>
+
+<script>
+function myFunction(name) {
+    return "Hello " + name;
+}
+document.getElementById("demo").innerHTML = myFunction("John");
+</script>
+
+</body>
+</html>
+====================================================
+
+q5.implementation of javascript objects
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<p id="demo"></p>
+
+<script>
+var person = {firstName:"John", lastName:"Doe", country: "USA"};
+document.getElementById("demo").innerHTML = person.country;
+</script>
+
+</body>
+</html>
+============================================================
+q6. implementation of javascript events
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<button onclick="myFunction()">Click Me</button>
+
+<p id="demo"></p> 
+
+<script>
+function myFunction() {
+    document.getElementById("demo").innerHTML = "Hello World";
+}
+</script>
+
+</body>
+</html> 
+=================================================================
+
+q7. implementation of javascript events
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<span onmouseover="this.style.color='red'">Mouse over me!</span>
+
+</body>
+</html>
+============================================================
+
+q8. string method-indexof()
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<p id="p1">Please locate where 'locate' occurs!.</p>
+
+<button onclick="myFunction()">Try it</button>
+
+<p id="demo"></p>
+
+<script>
+function myFunction() {
+    var str = document.getElementById("p1").innerHTML;
+    var pos = str.indexOf("locate");
+    document.getElementById("demo").innerHTML = pos;
+}
+</script>
+
+</body>
+</html>
+
+===============================================================
+q9. string method
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<p id="p1">Please locate where 'locate' occurs!.</p>
+
+<button onclick="myFunction()">Try it</button>
+
+<p id="demo"></p>
+
+<script>
+function myFunction() {
+    var str = document.getElementById("p1").innerHTML;
+    var pos = str.lastIndexOf("locate");
+    document.getElementById("demo").innerHTML = pos;
+}
+</script>
+
+</body>
+</html>
+
+==============================================================
+
+q10. string method (search)
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<p id="p1">Please locate where 'locate' occurs!.</p>
+
+<button onclick="myFunction()">Try it</button>
+
+<p id="demo"></p>
+
+<script>
+function myFunction() {
+    var str = document.getElementById("p1").innerHTML;
+    var pos = str.search("locate");
+    document.getElementById("demo").innerHTML = pos;
+}
+</script>
+
+</body>
+</html>
+
+===============================================================
+
+q11. slice method
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<p>The slice() method extract a part of a string
+and returns the extracted parts in a new string:</p>
+
+<p id="demo"></p>
+
+<script>
+var str = "Apple, Banana, Kiwi";
+document.getElementById("demo").innerHTML = str.slice(7,13);
+</script>
+
+</body>
+</html>
+
+==================================================================
+
+q12. substring
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<p>The substr() method extract a part of a string
+and returns the extracted parts in a new string:</p>
+
+<p id="demo"></p>
+
+<script>
+var str = "Apple, Banana, Kiwi";
+document.getElementById("demo").innerHTML = str.substring(7,13);
+</script>
+
+</body>
+</html>
+=================================================================
+
+q13.substr()
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<p>The substr() method extract a part of a string
+and returns the extracted parts in a new string:</p>
+
+<p id="demo"></p>
+
+<script>
+var str = "Apple, Banana, Kiwi";
+document.getElementById("demo").innerHTML = str.substr(7,6);
+</script>
+
+</body>
+</html>
+=====================================================================
+
+q14. replace()
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<p>Replace "Microsoft" with "IBM" in the paragraph below:</p>
+
+<button onclick="myFunction()">Try it</button>
+
+<p id="demo">Please visit Microsoft!</p>
+
+<script>
+function myFunction() {
+    var str = document.getElementById("demo").innerHTML; 
+    var txt = str.replace("Microsoft","IBM");
+    document.getElementById("demo").innerHTML = txt;
+}
+</script>
+
+</body>
+</html>
+============================================================
+
+q15.touppercase()
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<p>Convert string to upper case:</p>
+
+<button onclick="myFunction()">Try it</button>
+
+<p id="demo">Hello World!</p>
+
+<script>
+function myFunction() {
+    var text = document.getElementById("demo").innerHTML;
+    document.getElementById("demo").innerHTML = text.toUpperCase();
+}
+</script>
+
+</body>
+</html>
+===============================================================
+
+q16.concat()
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<p>The concat() method joins two or more strings:</p>
+
+<p id="demo"></p>
+
+<script>
+var text1 = "Hello";
+var text2 = "World!";
+document.getElementById("demo").innerHTML = text1.concat(" ",text2);
+</script>
+
+</body>
+</html>
+
+=======================================================================
+
+q17.charAt()
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<p>The charAt() method returns the character at a given position in a string:</p>
+
+<p id="demo"></p>
+
+<script>
+var str = "HELLO WORLD";
+document.getElementById("demo").innerHTML = str.charAt(0);
+</script>
+</body>
+</html>
+============================================================================
+
+q18. while loop
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<p>Click the button to loop through a block of code as long as i is less than 10.</p>
+
+<button onclick="myFunction()">Try it</button>
+
+<p id="demo"></p>
+
+<script>
+function myFunction() {
+    var text = "";
+    var i = 0;
+    while (i < 10) {
+        text += "<br>The number is " + i;
+        i++;
+    }
+    document.getElementById("demo").innerHTML = text;
+}
+</script>
+
+</body>
+</html>
+==================================================================================
+
+q19. for loop
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<p id="demo"></p>
+
+<script>
+var cars = ["BMW", "Volvo", "Saab", "Ford"];
+var i = 0;
+var text = "";
+for (;cars[i];) {
+    text += cars[i] + "<br>";
+    i++;
+}
+document.getElementById("demo").innerHTML = text;
+</script>
+
+</body>
+</html>
+=========================================================================================
+
+q20. object's method
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<p id="demo"></p>
+
+<script>
+function person(firstName,lastName,age,eyeColor) {
+    this.firstName = firstName;
+    this.lastName = lastName;
+    this.age = age;
+    this.eyeColor = eyeColor;
+    this.changeName = function (name) {
+        this.lastName = name;
+    }
+}
+var myMother = new person("Sally","Rally",48,"green");
+myMother.changeName("Doe");
+document.getElementById("demo").innerHTML =
+"My mother's last name is " + myMother.lastName;
+</script>
+
+</body>
+</html>
+=============================================================================================
+q21. prompt box
+<!DOCTYPE html>
+<html>
+<body>
+
+<p>Click the button to demonstrate the prompt box.</p>
+
+<button onclick="myFunction()">Try it</button>
+
+<p id="demo"></p>
+
+<script>
+function myFunction() {
+    var person = prompt("Please enter your name", "Harry Potter");
+    if (person != null) {
+        document.getElementById("demo").innerHTML =
+        "Hello " + person + "! How are you today?";
+    }
+}
+</script>
+
+</body>
+</html>
+==================================================================
+q22.confirm 
+<!DOCTYPE html>
+<html>
+<body>
+
+<p>Click the button to display a confirm box.</p>
+
+<button onclick="myFunction()">Try it</button>
+
+<p id="demo"></p>
+
+<script>
+function myFunction() {
+    var txt;
+    var r = confirm("Press a button!");
+    if (r == true) {
+        txt = "You pressed OK!";
+    } else {
+        txt = "You pressed Cancel!";
+    }
+    document.getElementById("demo").innerHTML = txt;
+}
+</script>
+
+</body>
+</html>
+
+
+
+
+
+
+
